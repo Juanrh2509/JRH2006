@@ -1,0 +1,39 @@
+<!-- <form #vehicleform="ngForm" (ngSubmit)="getVehicles()">
+  <label for="placa">Placa</label>
+  <input type="text" id="placa" name="placa" ngModel>
+  <label for="modelo">Modelo</label>
+  <input type="text" id="modelo" name="modelo" ngModel>
+  <label for="color">Color</label>
+  <input type="text" id="color" name="color" ngModel>
+  <button type="submit">Guardar</button>
+</form> -->
+<div class="row">
+  <div class="col-12 text-start py-4">
+    <h1>Pernotas de Vehiculos</h1>
+  </div>
+  <div class="col-md-12">
+    <table class="table table-hover table-bordered">
+      <thead>
+        <tr class="table-secondary">
+          <th scope="col">#</th>
+          <th scope="col">Placa</th>
+          <th scope="col">Modelo</th>
+          <th scope="col">Color</th>
+          <th scope="col">Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let vehicle of vehicles; index as i;">
+          <td>{{i+1}}</td>
+          <td>{{vehicle.placa}}</td>
+          <td>{{vehicle.model}}</td>
+          <td>{{vehicle.color}}</td>
+          <td class="d-flex justify-content-evenly">
+            <button class="btn btn-primary btn-sm">Editar</button>
+            <button class="btn btn-danger btn-sm">Eliminar</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

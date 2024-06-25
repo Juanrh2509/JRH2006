@@ -1,0 +1,9 @@
+<form #saveform="ngForm" (ngSubmit)="saveVehicle(saveform.value)">
+  <label for="placa">Placa</label>
+  <input type="text" id="placa" name="placa" ngModel>
+  <label for="modelo">Modelo</label>
+  <input type="text" id="modelo" name="modelo" ngModel>
+  <label for="color">Color</label>
+  <input type="text" id="color" name="color" ngModel>
+  <button type="submit">Guardar</button>
+</form>
